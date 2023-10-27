@@ -1,6 +1,9 @@
 provider "aws" {
   region = var.region
 
+  assume_role {
+    role_arn = "arn:aws:iam::691685274845:role/DevopsRoleEnvDev"
+  }
   default_tags {
     tags = {
       hashicorp-learn = "circleci"
